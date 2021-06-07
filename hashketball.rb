@@ -196,9 +196,18 @@ end
 
 
 def player_stats(name)
-  
-
+  player_hash = find_player(name)
+  player_hash.delete(:playername)
+  player_hash
 end
+
+def big_shoe_rebounds
+  
+  player = get_all_players.max by {|player_hash| player_hash[:shoe]}
+  
+end 
+
+
 
 
 
